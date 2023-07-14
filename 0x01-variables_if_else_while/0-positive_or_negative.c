@@ -1,8 +1,10 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/** main - Entry point Print if a number is positive equal to 0 or negative
- * Return: 0 (success)
+/**
+ * main - Determines if a number is positive, negative or zero.
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
