@@ -3,8 +3,8 @@
 #include <stdio.h>
 /**
  * main Entry point The program gets the last digit of a number
- * Always returns 0 
-*/
+ * Return: Always returns 0 
+ */
 int main(void)
 {
 	int n;
