@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * main Entry point Print the alphabet lowered
- * Always returns 0
-*/
+ * main Entry point Print the alphabet lowered.
+ *Return: Always returns 0
+ */
 int main(void)
 {
 	char letter = 'a';

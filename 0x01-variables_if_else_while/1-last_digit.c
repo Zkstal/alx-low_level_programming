@@ -2,9 +2,11 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main Entry point The program gets the last digit of a number
- * Return: Always returns 0 
-*/
+ * main - Prints the last digit of a random generated number
+ * and print if its greater than 5, less than 6, or 0.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
 	int n;
