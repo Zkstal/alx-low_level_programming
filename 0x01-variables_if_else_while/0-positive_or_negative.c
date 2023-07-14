@@ -1,8 +1,8 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/** main Entry point Print if a number is positive equal to 0 or negative
- * Returns 0
+/** main - Entry point Print if a number is positive equal to 0 or negative
+ * Return: 0 (success)
  */
 int main(void)
 {
