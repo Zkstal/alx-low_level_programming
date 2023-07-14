@@ -4,7 +4,7 @@
 /**
  * main Entry point The program gets the last digit of a number
  * Return: Always returns 0 
- */
+*/
 int main(void)
 {
 	int n;
