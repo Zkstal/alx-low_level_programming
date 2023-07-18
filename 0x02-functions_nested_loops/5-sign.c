@@ -7,19 +7,19 @@
  */
 int print_sign(int n)
 {
-	if (n = "0")
+	if (n == 0)
 	{
+		printf("0\n");
 		return (0);
-		printf ("0\n");
 	}
-	else if (n > "1")
+	else if (n > 1)
 	{
+		printf("+\n");
 		return (1);
-		printf ("+\n");
 	}
 	else
 	{
+		printf("-\n");
 		return (-1);
-		printf ("-\n");
 	}
 }
