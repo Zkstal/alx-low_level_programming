@@ -3,6 +3,8 @@
 /**
  * _isdigit - check if number is 0 9
  * @c: number to check
+ *
+ * Return: 0 or 1
  */
 
 int _isdigit(int c)
