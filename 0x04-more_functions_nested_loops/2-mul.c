@@ -4,7 +4,6 @@
  * mul - take a and b and multiply
  * @a: int to multiply a
  * @b: int to multiply b
- *
  * Return: a multiplied by b
  */
 
