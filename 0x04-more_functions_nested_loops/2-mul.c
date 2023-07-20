@@ -1,10 +1,9 @@
-#include "main.c"
-
+#include "main.h"
 /**
- * mul - take a and b and multiply
- * @a: int to multiply a
- * @b: int to multiply b
- * Return: a multiplied by b
+ * mul - multiply integer
+ * @a: first int
+ * @b: second int
+ * Return: addition of the multiplicattion
  */
 
 int mul(int a, int b)
