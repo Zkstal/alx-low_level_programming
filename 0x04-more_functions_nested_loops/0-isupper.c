@@ -2,9 +2,8 @@
 
 /**
  * _isupper - upper case letter
- * @c: character to be check
- * 
- * Return: 0 1
+ * @c: character to be check 
+ * Return: 0 and 1
  */
 
 int _isupper(int c)
