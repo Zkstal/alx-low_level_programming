@@ -1,11 +1,10 @@
 #include "main.h"
 
 /**
- * print_line -
- *
- * @n: number of times to print character
- *
+ * print_line - Print aline
+ * @n: number of times the character _ be printed
  */
+
 void print_line(int n)
 {
 	if (n <= 0)
