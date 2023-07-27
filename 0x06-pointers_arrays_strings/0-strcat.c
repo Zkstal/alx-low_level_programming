@@ -9,7 +9,7 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	int dlen , slen;
+	int dlen, slen;
 	
 	dlen = 0;
 	slen = 0;
@@ -27,5 +27,4 @@ char *_strcat(char *dest, char *src)
 	dest[dlen] = '\0';
 
 	return (dest);
-
 }
