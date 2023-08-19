@@ -3,7 +3,7 @@
 /**
  *  _calloc - allocate memory using malloc and set it to zero
  * @nmemb: number of elements
- * @size: size of the memory block to be allocated
+ * @size: size of the memory block to e allocated
  * Return: pointer to the address of the memory block
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
