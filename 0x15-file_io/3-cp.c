@@ -3,14 +3,14 @@
 
 /**
  * error_file - checks if the file is openable.
- * @file_from: to take from file_from.
+ * @from_file: to take from from_file.
  * @file_to: file destination file_to.
  * @argv: arguments.
  * Return: no return.
  */
-void error_file(int file_from, int file_to, char *argv[])
+void error_file(int from_file, int file_to, char *argv[])
 {
-	if (file_from == -1)
+	if (from_file == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
@@ -30,7 +30,7 @@ void error_file(int file_from, int file_to, char *argv[])
  */
 int main(int argc, char *argv[])
 {
-	int file_from, file_to, er_close;
+	int from_file, file_to, er_close;
 	ssize_t nchar, nwrr;
 	char buf[1024];
 
@@ -40,14 +40,14 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 
-	file_from = open(argv[1], O_RDONLY);
+	from_file = open(argv[1], O_RDONLY);
 	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
-	error_file(file_from, file_to, argv);
+	error_file(from_file, file_to, argv);
 
 	nchar = 1024;
 	while (nchar == 1024)
 	{
-		nchar = read(file_from, buf, 1024);
+		nchar = read(from_file, buf, 1024);
 		if (nchar == -1)
 			error_file(-1, 0, argv);
 		nwrr = write(file_to, buf, nchar);
@@ -55,17 +55,17 @@ int main(int argc, char *argv[])
 			error_file(0, -1, argv);
 	}
 
-	er_close = close(file_from);
+	er_close = close(from_file);
 	if (er_close == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", from_file);
 		exit(100);
 	}
 
 	er_close = close(file_to);
 	if (er_close == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", from_file);
 		exit(100);
 	}
 	return (0);
