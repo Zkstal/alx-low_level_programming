@@ -2,6 +2,27 @@
 #include <stdio.h>
 
 /**
+ * error_file - checks if the file is openable.
+ * @file_from: to take from file_from.
+ * @file_to: file destination file_to.
+ * @argv: arguments.
+ * Return: no return.
+ */
+void error_file(int file_from, int file_to, char *argv[])
+{
+        if (file_from == -1)
+        {
+                dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+                exit(98);
+        }
+        if (file_to == -1)
+        {
+                dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+                exit(99);
+        }
+}
+
+/**
  * main - check the code.
  * @argc: number of argument.
  * @argv: arguments.
@@ -48,25 +69,4 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 	return (0);
-}
-
-/**
- * error_file - checks if the file is openable.
- * @file_from: to take from file_from.
- * @file_to: file destination file_to.
- * @argv: arguments.
- * Return: no return.
- */
-void error_file(int file_from, int file_to, char *argv[])
-{
-	if (file_from == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
-	if (file_to == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
-	}
 }
